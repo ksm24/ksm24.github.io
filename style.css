@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background: linear-gradient(#05232f, #05031a);
+    background: linear-gradient(#105570, #05031a);
 }
 
 header {
@@ -22,28 +22,55 @@ header {
     padding-bottom: 1px;
     color: #ffffff;
 }
-
-.img-left {
+.center-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img-content {
     left: 0px;
     max-width: 40%;
-    height: auto;
+    height: 100%;
+    width: auto;
 }
-.txt-right {
-    display: inline-block;
-    position: absolute;
-    left: calc(40% + 4px);
-    right: 9px;
+.data-left img {
+    margin: 0px 4px 0px 0px;
+    float: left;
+}
+.data-right img {
+    margin: 0px 0px 0px 4px;
+    float: right;
 }
 .data-block {
     display: inline-block;
     margin: 8px 8px 8px 8px;
     border: 1px solid white;
     padding: 0px 0px 0px 0px;
+    opacity: 0;
+    transition: opacity 600ms ease-in;
 }
-
+.data-block.active {
+    opacity: 1;
+}
+.data-left {
+    width: 60%;
+    float: left;
+}
+.attract {
+    text-align: center;
+}
+.data-right {
+    width: 60%;
+    float: right;
+}
+.data-full {
+    width: 60%;
+}
 .text-intro {
-    margin: 0px 4px 0px 4px;
+    text-indent: 12px;
+    margin: 6px 4px 6px 4px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 12pt;
     text-align: justify;
 }
 
@@ -54,9 +81,13 @@ header {
 }
 
 footer {
+    position: sticky;
     font-size: 8pt;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 4px 4px 4px 4px;
     background: #101020;
     color: #808080;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
